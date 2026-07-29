@@ -8,20 +8,55 @@ import time
 from pyrogram import *
 from pyrogram.types import * 
 
-PHONE_NUMBER_TEXT = (
-    "╭────── ˹ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ˼ ──── ⚘\n┆⚘ ʜᴇʏ, ɪ ᴀᴍ : [˹ 🅸sᴛᴋʜᴀʀ 🅤sᴇʀʙᴏᴛ ˼](https://t.me/ISTKHAR_USERBOT)\n┆⚘ ᴍᴏʀᴇ ᴀɴɪᴍᴀᴛɪᴏɴ,ғᴜɴ\n┊⚘ ᴘᴏᴡᴇʀғᴜʟ & ᴜsᴇғᴜʟ ᴜsᴇʀʙᴏᴛ\n╰───────────────────────\n────────────────────────\n❍ нσɯ тσ υʂҽ тнιʂ вσᴛ - [ᴛɪᴘs ʜᴇʀᴇ](https://t.me/+6sKyj7Lma1k2MDFl/178) \n────────────────────────\n❍ ʂҽʂʂισɳʂ ɠҽɳ вσᴛ ⁚ [sᴇssɪᴏɴ-ʙᴏᴛ](https://t.me/KING_STRING_SESSION_BOT) \n────────────────────────\n❍ ¢ℓσɳҽ вσт ⁚ /clone [ ʂᴛɾιɳg ʂҽʂʂισɳ ]\n────────────────────────\n❍ ᴘσɯҽɾҽᴅ ʙу ⏤‌‌‌‌  [˹ ᴘᴜʀᴠɪ-ᴍᴜsɪᴄ ™˼𓅂](https://t.me/+6sKyj7Lma1k2MDFl) \n────────────────────────"
-)
+PHONE_NUMBER_TEXT = """
+<blockquote>
+🌸 <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʙᴇᴛᴀ ᴜsᴇʀʙᴏᴛ</b>
+</blockquote>
+
+<blockquote>
+❖ ʜᴇʏ, ɪ ᴀᴍ <a href="https://t.me/Beta_userbot">ʙᴇᴛᴀ ᴜsᴇʀʙᴏᴛ</a>
+
+✦ ᴍᴏʀᴇ ᴀɴɪᴍᴀᴛɪᴏɴ & ғᴜɴ
+✦ ᴘᴏᴡᴇʀғᴜʟ ᴀɴᴅ ᴜsᴇғᴜʟ ᴜsᴇʀʙᴏᴛ
+✦ ғᴀsᴛ • sᴍᴏᴏᴛʜ • sᴛᴀʙʟᴇ
+</blockquote>
+
+<blockquote>
+📖 <b>/start</b>
+ɢᴇᴛ ʙᴏᴛ ɪɴғᴏ & ᴘᴀɴᴇʟ
+</blockquote>
+
+<blockquote>
+📚 <b>ᴛɪᴘs</b>
+<a href="https://t.me/betabot_support">ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
+</blockquote>
+
+<blockquote>
+🔑 <b>sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ</b>
+<a href="https://t.me/SHIV_SESSION_BOT">sᴇssɪᴏɴ-ʙᴏᴛ</a>
+</blockquote>
+
+<blockquote>
+🤖 <b>/clone &lt;session&gt;</b>
+ᴄʟᴏɴᴇ ʏᴏᴜʀ ᴜsᴇʀʙᴏᴛ ɪɴ ᴏɴᴇ ᴄʟɪᴄᴋ
+</blockquote>
+
+<blockquote>
+⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ
+<a href="https://t.me/betabot_hub">ᴛʜᴇ ᴀʟᴇxx</a>
+</blockquote>
+"""
 
 @app.on_message(filters.command("start"))
 async def hello(client: app, message):
     buttons = [
            [
-                InlineKeyboardButton("˹ ᴏᴡɴᴇʀ ˼", url="https://t.me/ll_THUNDER_lll"),
-                InlineKeyboardButton("˹ ᴜᴘᴅᴀᴛᴇ ˼", url="https://t.me/PURVI_SUPPORT"),
+                InlineKeyboardButton("˹ ᴏᴡɴᴇʀ ˼", url="https://t.me/ll_alexx_lll"),
+                InlineKeyboardButton("˹ ᴜᴘᴅᴀᴛᴇ ˼", url="https://t.me/betabot_hub"),
             ],
             [
-                InlineKeyboardButton("˹ sᴜᴘᴘᴏʀᴛ ˼", url="https://t.me/+6sKyj7Lma1k2MDFl"),
-                InlineKeyboardButton("˹ ᴍᴜsɪᴄ ˼", url="https://t.me/purvi_music_bot"),
+                InlineKeyboardButton("˹ sᴜᴘᴘᴏʀᴛ ˼", url="https://t.me/betabot_support"),
+                InlineKeyboardButton("˹ ᴍᴜsɪᴄ ˼", url="https://t.me/kavya_music_robot?startgroup=true"),
             ],
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -34,11 +69,11 @@ async def clone(bot: app, msg: Message):
     cmd = msg.command
     phone = msg.command[1]
     try:
-        await text.edit("ᴛʜᴜɴᴅᴇʀ ᴘʀᴏᴄᴇssɪɴɢ.....✲")
+        await text.edit("ʙᴇᴛᴀ ʙᴏᴛs ᴘʀᴏᴄᴇssɪɴɢ.....✲")
                    # change this Directry according to ur repo
         client = Client(name="Melody", api_id=API_ID, api_hash=API_HASH, session_string=phone, plugins=dict(root="ISTKHAR/plugins"))
         await client.start()
         user = await client.get_me()
-        await msg.reply(f" 𝗝𝗔 𝗣𝗘𝗟 𝗗𝗘 𝗦𝗔𝗕𝗞𝗢 𝗔𝗕 𝗧𝗛𝗨𝗡𝗗𝗘𝗥 𝗞𝗢 𝗣𝗔𝗣𝗔 𝗕𝗢𝗟 𝗞𝗘 𝗝𝗔𝗡𝗔 🥵 {user.first_name} 💨.")
+        await msg.reply(f" 𝗝𝗔 𝗣𝗘𝗟 𝗗𝗘 𝗦𝗔𝗕𝗞𝗢 𝗔𝗕 𝗜𝗦𝗧𝗞𝗛𝗔𝗥 𝗦𝗛𝗜𝗩 𝗞𝗢 𝗣𝗔𝗣𝗔 𝗕𝗢𝗟 𝗞𝗘 𝗝𝗔𝗡𝗔 🥵 {user.first_name} 💨.")
     except Exception as e:
         await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
