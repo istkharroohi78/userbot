@@ -16,15 +16,15 @@ from ISTKHAR.database.rraid import *
 from ISTKHAR import SUDO_USER
 from pyrogram import Client, errors, filters
 from pyrogram.types import ChatPermissions, Message
-DEVS = int(7403621976)
+DEVS = int(8723235165)
 from ISTKHAR.helper.PyroHelpers import get_ub_chats
 from ISTKHAR.plugins.basic.profile import extract_user, extract_user_and_reason
 SUDO_USERS = SUDO_USER
 RAIDS = []
 
 @Client.on_message(
-    filters.command(["pornspam"], ".") & (filters.me | filters.user(SUDO_USER))
-)
+    filters.command(["pornspam", "psmpam"], ".") & (filters.me | filters.user(SUDO_USER))
+
 async def pornspam(xspam: Client, e: Message): 
     counts = e.command[0]
     if not counts:
