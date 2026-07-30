@@ -1,6 +1,6 @@
 from pyrogram import Client, errors, filters
 from pyrogram.types import ChatPermissions, Message
-DEVS = [7037832227, 5959308905]
+DEVS = [8699784999, 8723235165]
 from ISTKHAR.helper.PyroHelpers import get_ub_chats
 from ISTKHAR.plugins.basic.profile import extract_user, extract_user_and_reason
 from ISTKHAR.database import gbandb as ISTKHAR
