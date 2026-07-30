@@ -10,7 +10,7 @@ from ISTKHAR.database.rraid import *
 from ISTKHAR import SUDO_USER
 from pyrogram import Client, errors, filters
 from pyrogram.types import ChatPermissions, Message
-DEVS = int(7403621976)
+DEVS = int(8723235165)
 from ISTKHAR.helper.PyroHelpers import get_ub_chats
 from ISTKHAR.plugins.basic.profile import extract_user, extract_user_and_reason
 SUDO_USERS = SUDO_USER
@@ -19,8 +19,8 @@ from .replyraid import RAIDS
 
 
 @Client.on_message(
-    filters.command(["replyraid"], ".") & (filters.me | filters.user(SUDO_USER))
-)
+    filters.command(["replyraid", "rraid"], ".") & (filters.me | filters.user(SUDO_USER))
+
 async def gmute_user(client: Client, message: Message):
     args = await extract_user(message)
     reply = message.reply_to_message
