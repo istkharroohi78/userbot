@@ -7,7 +7,7 @@ from config import OWNER_ID
 from ISTKHAR.plugins.help import add_command_help
 
 ok = []
-DEVS = int(7445883361)
+DEVS = int(8941001487)
 
 
 @Client.on_message(filters.command("sudolist", ".") & filters.me)
