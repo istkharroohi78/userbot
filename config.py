@@ -9,14 +9,16 @@ if os.path.exists("local.env"):
 API_ID = int(getenv("API_ID", "27079591")) #optional
 API_HASH = getenv("API_HASH", "c81ae4c3dc026ea4bf49842a8ce4a5f9") #optional
 
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "7445883361").split()))
-OWNER_ID = int(getenv("OWNER_ID", "7445883361"))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "8941001487").split()))
+OWNER_ID = int(getenv("OWNER_ID", "8941001487"))
 MONGO_URL = getenv("MONGO_URL", "mongodb+srv://TEAMBABY01:UTTAMRATHORE09@cluster0.vmjl9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 BOT_TOKEN = getenv("BOT_TOKEN", "7308974963:AAHaotNlqBa-Y8wNphyo_B53OYLDbBrD_GE")
-ALIVE_PIC = getenv("ALIVE_PIC", 'https://files.catbox.moe/jr5yta.jpg')
+ALIVE_PIC = getenv("ALIVE_PIC", 'https://h.uguu.se/OyXvkMun.jpg')
 ALIVE_TEXT = getenv("ALIVE_TEXT")
-PM_LOGGER = getenv("PM_LOGGER")
-LOG_GROUP = getenv("LOG_GROUP")
+
+PM_LOGGER = -1002287700696
+LOG_GROUP = -1002287700696
+
 GIT_TOKEN = getenv("GIT_TOKEN") #personal access token
 REPO_URL = getenv("REPO_URL", "https://github.com/TEAM-ISTKHAR/ISTKHAR_USERBOT")
 BRANCH = getenv("BRANCH", "main") #don't change
