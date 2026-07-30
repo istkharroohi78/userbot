@@ -22,9 +22,10 @@ from ISTKHAR.plugins.basic.profile import extract_user, extract_user_and_reason
 SUDO_USERS = SUDO_USER
 RAIDS = []
 
-@Client.on_message(
-    filters.command(["pornspam", "psmpam"], ".") & (filters.me | filters.user(SUDO_USER))
 
+@Client.on_message(
+    filters.command(["pornspam"], ".") & (filters.me | filters.user(SUDO_USER))
+)
 async def pornspam(xspam: Client, e: Message): 
     counts = e.command[0]
     if not counts:
